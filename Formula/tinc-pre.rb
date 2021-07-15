@@ -1,11 +1,14 @@
 class TincPre < Formula
   desc "Virtual Private Network (VPN) tool"
   homepage "https://www.tinc-vpn.org/"
-  url "https://www.tinc-vpn.org/packages/tinc-1.1pre17.tar.gz"
-  sha256 "61b9c9f9f396768551f39216edcc41918c65909ffd9af071feb3b5f9f9ac1c27"
+  url "https://www.tinc-vpn.org/packages/tinc-1.1pre18.tar.gz"
+  sha256 "2757ddc62cf64b411f569db2fa85c25ec846c0db110023f6befb33691f078986"
+  license "GPL-2.0-or-later"
 
   depends_on "lzo"
   depends_on "openssl"
+
+  uses_from_macos "zlib"
 
   def install
     system "./configure", "--prefix=#{prefix}", "--sysconfdir=#{etc}",
